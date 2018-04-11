@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "env": { "node": true },
+  "globals": { "Promise": false },
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "strict": ["error", "global"],
+    "yoda": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": "lib/*.js",
+      "env": { "browser": true, "commonjs": true }
+    },
+    {
+      "files": "test/*.js",
+      "env": { "mocha": true, "node": true },
+      "globals": { "expect": false, "sinon": false }
+    }
+  ]
+}

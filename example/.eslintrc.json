@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "env": { "browser": true, "es6": true },
+  "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all"
+    }],
+    "no-unused-vars": ["off"]
+  }
+}
